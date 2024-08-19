@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        background-color: blue;
+    }
+    h1{
+       text-align: center;
+    }
+    div{
+    text-align: center;
+    }
+    
+</style>
+<body>
+    <h1>Show & Hide Button </h1>
+    <div>
+    <input type="password" id="text"><br><br>
+    <button id="btn" onclick="abc()">Show</button>
+</div>
+
+
+<script>
+    let pass = document.getElementById("text");
+    let btn = document.getElementById("btn");
+
+function abc() {
+  if(btn.innerHTML =="Show"){
+    pass.type = "text"
+    btn.innerHTML = "hide"
+  }
+  else{
+  pass.type = "password"
+    btn.innerHTML = "Show"
+}
+    }
+</script>
+</body>
+</html>
+<br>
+<br>
+<hr>
+<body>
+    <h1>Add Plus </h1>
+<div>
+    <input type="text" class="num" placeholder="Enter Num1"><br><br>
+    <input type="text" class="num" placeholder="Enter Num2"><br><br>
+    <button id ="add">Add</button>
+    <input type="text" class="num" placeholder="Total"><br><br>
+    
+</div>
+<script>
+let num = document.querySelectorAll(".num");    
+let add = document.querySelector("#add");
+
+add.addEventListener("click",()=>{
+
+    let input1 =Number(num[0].value);
+    let input2 =Number(num[1].value);
+    let output =input1 + input2
+    num[2].value=output;
+  
+})
+
+
+
+</script>
+</body>
+</html>
